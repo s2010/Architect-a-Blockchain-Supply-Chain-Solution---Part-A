@@ -4,14 +4,14 @@ The following are the UMLs for Dates supply chain:
 
 ### Activity Diagram
 
-![Activity Diagram](ActivityDiagram.png)
+![Activity Diagram](images/ActivityDiagram.png)
 
 ### Sequence Diagram
-![Sequence Diagram](SequenceDiagram.png)
+![Sequence Diagram](images/SequenceDiagram.png)
 
 ### State Diagram
-![State Diagram](StateDiagram.png)
+![State Diagram](images/StateDiagram.png)
 
 ### Class Diagram
-![Data Mode Diagram](classdiagram.png)
+![Data Mode Diagram](images/classdiagram.png)
 
