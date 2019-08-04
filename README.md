@@ -42,7 +42,7 @@ The following are the UMLs for Dates supply chain:
 ## How To Start
 1. Clone this repository
 ```
-git clone https://github.com/RusPosevkin/coffee-supply-chain.git
+git clone https://github.com/s2010/Architect-a-Blockchain-Supply-Chain-Solution---Part-AB.git
 ```
 2. Change directory to ```project6``` folder and install all requisite npm packages:
 ```
