@@ -1,10 +1,13 @@
-pragma solidity >=0.4.21 <0.6.0;
+//pragma solidity >=0.4.21 <0.6.0;
+// pragma solidity ^0.4.24;
+// pragma solidity >=0.4.24;
+pragma solidity ^0.5;
+
 import '../coffeecore/Ownable.sol';
 import '../coffeeaccesscontrol/ConsumerRole.sol';
 import '../coffeeaccesscontrol/RetailerRole.sol';
 import '../coffeeaccesscontrol/DistributorRole.sol';
 
-// Define a contract 'Supplychain'
 // Define a contract 'Supplychain'
 contract SupplyChain is Ownable, ConsumerRole, RetailerRole, DistributorRole {
   // Define a variable called 'upc' for Universal Product Code (UPC)
@@ -16,12 +19,12 @@ contract SupplyChain is Ownable, ConsumerRole, RetailerRole, DistributorRole {
   // Define a public mapping 'items' that maps the UPC to an Item.
   mapping (uint => Item) items;
 
-  // Define a public mapping 'itemsHistory' that maps the UPC to an array of TxHash, 
+  // Define a public mapping 'itemsHistory' that maps the UPC to an array of TxHash,
   // that track its journey through the supply chain -- to be sent from DApp.
   mapping (uint => string[]) itemsHistory;
-  
+
   // Define enum 'State' with the following values:
-  enum State { 
+  enum State {
     Harvested,  // 0
     Processed,  // 1
     Packed,     // 2
@@ -145,13 +148,13 @@ contract SupplyChain is Ownable, ConsumerRole, RetailerRole, DistributorRole {
 
   // Define a function 'harvestItem' that allows a farmer to mark an item 'Harvested'
   function harvestItem(
-    uint _upc, 
-    address _originFarmerID,
-    string memory _originFarmName, 
-    string memory _originFarmInformation, 
-    string memory  _originFarmLatitude, 
-    string memory _originFarmLongitude, 
-    string memory _productNotes) public 
+     uint _upc,
+     address payable _originFarmerID,
+     string memory _originFarmName,
+     string memory _originFarmInformation,
+     string memory _originFarmLatitude,
+     string memory _originFarmLongitude,
+     string memory _productNotes) public
   {
     // Add the new item as part of Harvest
     items[_upc] = Item({
@@ -308,10 +311,10 @@ contract SupplyChain is Ownable, ConsumerRole, RetailerRole, DistributorRole {
   uint    itemUPC,
   address ownerID,
   address originFarmerID,
-  string  memory originFarmName,
-  string memory  originFarmInformation,
-  string memory  originFarmLatitude,
-  string  memory originFarmLongitude
+  string memory originFarmName,
+  string memory originFarmInformation,
+  string memory originFarmLatitude,
+  string memory originFarmLongitude
   ) 
   {
     // Assign values to the 8 parameters
