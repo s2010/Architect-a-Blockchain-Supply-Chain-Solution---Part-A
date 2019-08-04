@@ -70,7 +70,7 @@ truffle test
 npm run dev
 ```
 
-##Contracts deployment output:
+## Contracts deployment output:
 
 Starting migrations...
 ======================
